@@ -110,7 +110,8 @@ def drawDataset(data , label , x = None , y = None , line = True , alphas = None
                a1.append(data[i])
         a1 =  np.matrix(a1)
         print('The number of the support vector : ' , len(a1))
-        plt.scatter(a1[: , 0].tolist(),a1[: , 1].tolist(), s=100, c="y", marker="v", label="support_v")
+        plt.scatter(a1[: , 0].tolist(),a1[: , 1].tolist(), s=150, c='none', alpha=0.7,
+                       linewidth=1.5, edgecolor='#AB3319' , label = 'support vector')
 
     plt.legend()
     plt.xlabel('X axis')
