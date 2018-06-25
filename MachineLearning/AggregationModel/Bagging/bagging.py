@@ -4,7 +4,7 @@ import pandas as pd
 from collections import defaultdict
 import random
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import precision_score,recall_score
+from sklearn.metrics import precision_score,recall_score,accuracy_score
 from sklearn.ensemble import IsolationForest
 class Bagging(object):
 
@@ -27,7 +27,7 @@ class Bagging(object):
         result = map(Vote , term)
         return result
 
-    def UnderSampling(self,data):
+    def UnderSampling(self,data , number):
         data = np.array(data)
         np.random.shuffle(data)
         newdata = data[0:int(data.shape[0]*self.rate),:]
@@ -54,7 +54,7 @@ class Bagging(object):
         score = list(score)
         score = np.matrix(score)
         recall = recall_score(pre.T , score.T, average=None)
-        precision = precision_score(pre.T, score.T, average=None)
+        precision = accuracy_score(pre.T, score.T)
         return recall , precision
         pass
 
@@ -69,7 +69,6 @@ class Bagging(object):
             sample_function = self.UnderSampling
             print ("sampling frequency : ",self.rate)
         for estimator in self.estimator:
-            print (estimator)
             for i in range(int(self.n_estimators/num_estimators)):
                 sample=np.array(sample_function(train,len(train)))
                 clf = estimator.fit(sample[:,0:-1],sample[:,-1])

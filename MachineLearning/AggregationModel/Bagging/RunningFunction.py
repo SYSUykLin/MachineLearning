@@ -15,7 +15,7 @@ def loadData():
     return train , test
     pass
 
-def Running():
+def Running(sample = 'RepetitionRandomSampling'):
     train , test = loadData()
     clfs = [RandomForestClassifier(n_estimators=100, n_jobs=-1, criterion='gini'),
             RandomForestClassifier(n_estimators=100, n_jobs=-1, criterion='entropy'),
@@ -23,9 +23,24 @@ def Running():
             ExtraTreesClassifier(n_estimators=100, n_jobs=-1, criterion='entropy'),
             GradientBoostingClassifier(learning_rate=0.05, subsample=0.5, max_depth=6, n_estimators=50)]
     bag = bagging.Bagging(n_estimators=5 , estimator=clfs)
-    recall , precision = bag.MutModel_clf(train , test)
+    recall , precision = bag.MutModel_clf(train , test , sample_type=sample)
     print(recall , precision)
+    return precision
     pass
 
 if __name__ == '__main__':
-    Running()
+    pres1 = []
+    pres2 = []
+
+    for i in range(10):
+        pre = Running(sample='UnderSampling')
+        pres2.append(pre)
+
+    for i in range(10):
+        pre = Running()
+        pres1.append(pre)
+
+
+    plt.plot([x for x in range(10)] , pres1 , c = 'r')
+    plt.plot([x for x in range(10)] , pres2 , c = 'b')
+    plt.show()
