@@ -29,7 +29,6 @@ if __name__ == '__main__':
 
     np.random.seed(0)  # seed to shuffle the train set
     accuracys = []
-    n_folds = 10
     verbose = True
     shuffle = False
 
@@ -39,7 +38,6 @@ if __name__ == '__main__':
         idx = np.random.permutation(y.size) #random a sequence
         X = X[idx]
         y = y[idx]
-    kfold = StratifiedKFold(n_splits=5)
     clfs = [RandomForestClassifier(n_estimators=100, n_jobs=-1, criterion='gini'),
             RandomForestClassifier(n_estimators=100, n_jobs=-1, criterion='entropy'),
             ExtraTreesClassifier(n_estimators=100, n_jobs=-1, criterion='gini'),
@@ -50,10 +48,6 @@ if __name__ == '__main__':
     dataset_blend_train = np.zeros((X.shape[0], len(clfs)))
     dataset_blend_test = np.zeros((X_test.shape[0], len(clfs)))
     test_matrix = np.zeros((len(y_test) , 5))
-
-
-
-
     for j, clf in enumerate(clfs):
         print (j, clf)
         clf.fit(X[j*700 : (j+1)*700] , y[j*700 : (j+1)*700])
