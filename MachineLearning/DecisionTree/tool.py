@@ -35,7 +35,5 @@ def cal_gini(data):
     return gini
     pass
 
-def drawTree():
-    pass
 
 
