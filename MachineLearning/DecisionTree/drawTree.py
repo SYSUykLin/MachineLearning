@@ -40,9 +40,9 @@ def drawNode(x, y ,parent,color, marker, myTree, position):
     if myTree.value != None and myTree.fea != None:
         po = 5
         if position == 'right':
-           plt.annotate(s = 'dimension' + str(myTree.fea) + '>' + str(round(myTree.value, 2)), xy = (x-25 - po, y))
+           plt.annotate(s = 'd' + str(myTree.fea) + '>' + str(round(myTree.value, 2)), xy = (x-25 - po, y))
         else:
-           plt.annotate(s='dimension' + str(myTree.fea) + '>' + str(round(myTree.value, 2)), xy=(x - 25 + po, y))
+           plt.annotate(s='d' + str(myTree.fea) + '>' + str(round(myTree.value, 2)), xy=(x - 25 + po, y))
     if parent != None:
        plt.plot([x, parent.x], [y, parent.y], color = 'gray', alpha = 0.5)
 def draw(myTree, parent = None, x = 100, y = 100, color = 'r', marker = '^', position = None):
