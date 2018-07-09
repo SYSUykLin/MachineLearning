@@ -46,7 +46,6 @@ class randomForest(object):
             k = int(math.log(d - 1, 2)) + 1
         else:
             k = 1
-
         for i in range(trees_num):
             print('The ', i, ' tree. ')
             data_samples, feature = self.choose_samples(data, k)
