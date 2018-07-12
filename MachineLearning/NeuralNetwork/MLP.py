@@ -83,7 +83,7 @@ if __name__ == '__main__':
     Accuracy = []
     losses = []
     x, y = Tool.generator()
-    for i in range(1, 5):
+    for i in range(1, 13):
         mlp = Network(x, y)
         loss = mlp.build_Network(n_hinden=i)
         losses.append(loss)
