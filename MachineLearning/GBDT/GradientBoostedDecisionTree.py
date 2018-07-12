@@ -10,7 +10,7 @@ def loadDataSet(filename):
     :param filename: the filename which you need to open
     :return: dataset in file
     '''
-    dataMat = pd.read_csv('../Data/' + filename)
+    dataMat = pd.read_csv(filename)
     for i in range(np.shape(dataMat)[0]):
         if dataMat.iloc[i, 2] == 0:
             dataMat.iloc[i, 2] = -1
@@ -25,6 +25,7 @@ def split_data(data_array, col, value):
     pass
 
 def getErr(data_array):
+    '''calculate the var '''
     return np.var(data_array.iloc[:, -1]) * data_array.shape[0]
     pass
 
@@ -32,6 +33,7 @@ def regLeaf(data_array):
     return np.mean(data_array.iloc[:, -1])
 
 def get_best_split(data_array, ops = (1, 4)):
+    '''the best point to split data'''
     tols = ops[0]
     toln = ops[1]
     if len(set(data_array.iloc[:, -1])) == 1:
@@ -61,6 +63,7 @@ def get_best_split(data_array, ops = (1, 4)):
     return best_col, best_value
 
 class node:
+    '''tree node'''
     def __init__(self, col=-1, value=None, results=None, gb=None, lb=None):
         self.col = col
         self.value = value
@@ -81,6 +84,7 @@ def buildTree(data_array, ops = (1, 4)):
     pass
 
 def treeCast(tree, inData):
+    '''get the classification'''
     if tree.results != None:
         return tree.results
     if inData.iloc[tree.col] > tree.value:
