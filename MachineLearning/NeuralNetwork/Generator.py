@@ -61,4 +61,5 @@ def get_colors(number):
 
 if __name__ == '__main__':
     x, y = generator()
+    print(y)
     logistics_regression(x, y)
