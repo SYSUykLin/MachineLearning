@@ -95,6 +95,9 @@ if __name__ == '__main__':
             if expect[i, j] == max(expect[i, ]):
                 order[i] = j
         plt.scatter(X[i, 0], X[i, 1], c = color[int(order[i])], alpha=0.5, marker=markers[int(order[i])])
+    plt.title('EM algorithm classification')
+    plt.xlabel('X')
+    plt.ylabel('Y')
     plt.show()
     print('standedμ:',mu4, mu3, mu2, mu1)
     print('standedα:',alpha)
