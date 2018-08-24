@@ -2,7 +2,24 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/AggregationModel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/Autoencode" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/ClusterAlgorithm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/Data" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/DecisionTree" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/ExpectationMaximization" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/GBDT" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/Hinge Loss SVM" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/HMM" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/MatrixFactorization" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/NeuralNetwork" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/originSVM" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/PCA" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/RandomForest" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/RBFNetwork" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MachineLearning/Support Vector Machine" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MachineLearning/LogosticRegression" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6 (untitled)" jdkType="Python SDK" />
