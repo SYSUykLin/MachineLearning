@@ -13,4 +13,5 @@ Use python3 and pycharm implement some  Machine learning algorithm , such as SVM
 9.The Matrix Factorization have been finished,Related blog links:https://www.jianshu.com/p/af49053832c5</br>
 10.The EM algorithm have been finished,Related blog links:https://www.jianshu.com/p/c8ac8cd5471b </br>
 11.The HMM algorithm have been finished,Related blog links:https://www.jianshu.com/p/0fb777cae3b7 </br>
-12.The linear model have been finished,Related blog links:https://www.jianshu.com/p/48b5979c4d4a
+12.The linear model have been finished,Related blog links:https://www.jianshu.com/p/48b5979c4d4a </br>
+13.The Factorization Machine have been finished,Related blog links:https://www.jianshu.com/p/782169aa8098
