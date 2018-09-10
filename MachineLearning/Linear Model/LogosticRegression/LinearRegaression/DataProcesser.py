@@ -16,19 +16,10 @@ class DataProcesser(object):
     get x and y
     '''
     def get_param_target(self):
-        file_dataframe = pd.read_csv(self.base_dir + self.filename,  encoding='UTF-8', names=['x1', 'x2', 'y'], dtype=np.float32)
-        x1 = file_dataframe['x1']
-        x1 -= np.max(x1)
-        x2 = file_dataframe['x2']
-        x2 -= np.max(x2)
-        y = file_dataframe['y']
-
         np.random.seed(12)
         num_observations = 5000
-
         x1 = np.random.multivariate_normal([0, 0], [[1, .75], [.75, 1]], num_observations)
         x2 = np.random.multivariate_normal([1, 4], [[1, .75], [.75, 1]], num_observations)
-
         simulated_separableish_features = np.vstack((x1, x2)).astype(np.float32)
         simulated_labels = np.hstack((np.zeros(num_observations),
                                       np.ones(num_observations)))
