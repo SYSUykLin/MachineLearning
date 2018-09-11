@@ -65,7 +65,7 @@ def loadData(filename):
     for i in range(n):
         feature = []
         feature.append(int(1))
-        for j in range(1,m):
+        for j in range(0,m-1):
             feature.append(df.iloc[i, j])
         if df.iloc[i, m-1] == -1:
             labels.append(0)
@@ -80,10 +80,11 @@ def loadData(filename):
             c = 'blue'
         plt.scatter(df.iloc[i, 0], df.iloc[i, 1], c = c)
     plt.show()
+    print(features)
     return np.mat(features), np.mat(labels).T, df
 
 if __name__ == '__main__':
-    f, t, df = loadData('../Data/testSet.txt')
+    f, t, df = loadData('../../Data/testSet.txt')
     lr_train_bgd(f, t, 10000, 0.001, df)
 
 
