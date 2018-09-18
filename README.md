@@ -15,4 +15,4 @@ Use python3 and pycharm implement some  Machine learning algorithm , such as SVM
 11.The HMM algorithm have been finished,Related blog links:https://www.jianshu.com/p/0fb777cae3b7 </br>
 12.The linear model have been finished,Related blog links:https://www.jianshu.com/p/48b5979c4d4a </br>
 13.The Factorization Machine have been finished,Related blog links:https://www.jianshu.com/p/782169aa8098 </br>
-14.The Quasi-Newton Method have been finished,Related blog links
+14.The Quasi-Newton Method have been finished,Related blog links:https://www.jianshu.com/p/c5f42339103d
