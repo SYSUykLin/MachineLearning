@@ -34,7 +34,7 @@ class DataProcesser(object):
 
     def showDatasetDistribution(self, features, target, w, flag):
         plt.title('Distribution of the data')
-        plt.scatter(np.array(features[:, 1]), np.array(target[:, 0]))
+        plt.scatter(np.array(features[:, 1]), np.array(target[:, 0]), alpha=0.5)
         plt.xlabel('y')
         plt.ylabel('x')
         if flag == True:
@@ -45,11 +45,20 @@ class DataProcesser(object):
             pass
         plt.show()
 
+    def show(self, x1, x2, y, w):
+        plt.scatter(x1, x2, c = y)
+        x = np.array(range(-3, 4))
+        plt.plot(x, (-w[2] - w[0]*x)/w[1])
+        plt.show()
+        pass
+
 
 if __name__ == '__main__':
     Processer = DataProcesser()
     # x1, x2, y = Processer.get_param_target()
-    # print(newton_method(x1, x2, y))
+    # w = newton_method(x1, x2, y)
+    # Processer.show(x1, x2, y, w)
+
     features, target = Processer.get_dataset_from_file('data.txt')
     newTon = DampedNewton(features, target.T, 100, 0.1, 0.5)
     Processer.showDatasetDistribution(features, target.T, None, False)
