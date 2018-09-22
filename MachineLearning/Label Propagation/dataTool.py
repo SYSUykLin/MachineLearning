@@ -8,7 +8,7 @@ def loadData(filePath):
     vector_dict = {}
     edge_dict = {}
     for line in f.readlines():
-        lines = line.strip().split("\t")
+        lines = line.strip().split("   ")
         for i in range(2):
             if lines[i] not in vector_dict:
                 vector_dict[lines[i]] = int(lines[i])
