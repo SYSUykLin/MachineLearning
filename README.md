@@ -16,4 +16,5 @@ Use python3 and pycharm implement some  Machine learning algorithm , such as SVM
 12.The linear model have been finished,Related blog links:https://www.jianshu.com/p/48b5979c4d4a </br>
 13.The Factorization Machine have been finished,Related blog links:https://www.jianshu.com/p/782169aa8098 </br>
 14.The Quasi-Newton Method have been finished,Related blog links:https://www.jianshu.com/p/c5f42339103d </br>
-15.The Label Propagation Algorithm have been finished,Related blog links:https://www.jianshu.com/p/cff65d7595f9
+15.The Label Propagation Algorithm have been finished,Related blog links:https://www.jianshu.com/p/cff65d7595f9 </br>
+16.The recommender system have been finished,Related blog links:https://www.jianshu.com/p/d3f7a62d04c7
