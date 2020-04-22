@@ -7,6 +7,7 @@
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/MachineLearning/HMM/supervisedParam" />
             <path value="file://$PROJECT_DIR$/MachineLearning/HMM/unsupervisedParam" />
+            <path value="file://$PROJECT_DIR$/CS231n/cifar-10-batches-py" />
           </resourceRoots>
         </entryData>
       </entry>
