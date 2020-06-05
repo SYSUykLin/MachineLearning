@@ -32,6 +32,9 @@
       <sourceFolder url="file://$MODULE_DIR$/MachineLearning/Recmmended System/NMF" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MachineLearning/Recmmended System/PageRank" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CS231n" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/李沐" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/kaggle" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tf" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6 (root)" jdkType="Python SDK" />
